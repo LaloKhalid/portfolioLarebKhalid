@@ -16,8 +16,8 @@ const CONTACT_INFO = [
   {
     icon: '📧',
     label: 'Email',
-    value: 'lareb.usman.lu@gmail.com',
-    href: 'mailto:lareb.usman.lu@gmail.com',
+    value: 'lareb.usman@yahoo.com',
+    href: 'mailto:lareb.usman@yahoo.com',
   },
   {
     icon: '🐙',
@@ -29,7 +29,7 @@ const CONTACT_INFO = [
     icon: '💼',
     label: 'LinkedIn',
     value: 'Connect with me',
-    href: 'https://linkedin.com',
+    href: 'https://www.linkedin.com/in/lareb-k-572469166',
   },
 ];
 
@@ -100,10 +100,10 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-10 items-start">
+        <div className="grid grid-cols-1 gap-10 items-start">
 
           {/* ── Contact info ── */}
-          <div className={`lg:col-span-2 space-y-4 reveal-left ${inView ? 'visible' : ''}`} style={{ transitionDelay: '150ms' }}>
+          <div className={`grid grid-cols-1 sm:grid-cols-2 gap-4 reveal-left ${inView ? 'visible' : ''}`} style={{ transitionDelay: '150ms' }}>
             {CONTACT_INFO.map(item => (
               <a
                 key={item.label}
@@ -139,113 +139,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* ── Form ── */}
-          <div className={`lg:col-span-3 reveal-right ${inView ? 'visible' : ''}`} style={{ transitionDelay: '250ms' }}>
-            {status === 'sent' ? (
-              <div className="p-12 rounded-3xl bg-gray-50 dark:bg-[#0e0e20] border border-gray-100 dark:border-white/[0.05] text-center space-y-5">
-                <div className="text-5xl select-none">🎉</div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">Message Sent!</h3>
-                  <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                    Thanks for reaching out. I'll get back to you within 24 hours.
-                  </p>
-                </div>
-                <button
-                  onClick={() => setStatus('idle')}
-                  className="px-6 py-2.5 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold transition-colors"
-                >
-                  Send Another
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} noValidate className="space-y-4">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {/* Name */}
-                  <div>
-                    <label className="block text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide mb-2">
-                      Name <span className="text-violet-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      value={form.name}
-                      onChange={field('name')}
-                      placeholder="Lareb Khalid"
-                      className={errors.name ? inputErr : inputOk}
-                    />
-                    {errors.name && <p className="mt-1.5 text-xs text-red-500">{errors.name}</p>}
-                  </div>
-
-                  {/* Email */}
-                  <div>
-                    <label className="block text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide mb-2">
-                      Email <span className="text-violet-500">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      value={form.email}
-                      onChange={field('email')}
-                      placeholder="your@email.com"
-                      className={errors.email ? inputErr : inputOk}
-                    />
-                    {errors.email && <p className="mt-1.5 text-xs text-red-500">{errors.email}</p>}
-                  </div>
-                </div>
-
-                {/* Subject */}
-                <div>
-                  <label className="block text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide mb-2">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    value={form.subject}
-                    onChange={field('subject')}
-                    placeholder="What's this about?"
-                    className={inputOk}
-                  />
-                </div>
-
-                {/* Message */}
-                <div>
-                  <label className="block text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide mb-2">
-                    Message <span className="text-violet-500">*</span>
-                  </label>
-                  <textarea
-                    rows={5}
-                    value={form.message}
-                    onChange={field('message')}
-                    placeholder="Tell me about your project or just say hi..."
-                    className={`${errors.message ? inputErr : inputOk} resize-none`}
-                  />
-                  {errors.message && <p className="mt-1.5 text-xs text-red-500">{errors.message}</p>}
-                </div>
-
-                {/* Submit */}
-                <button
-                  type="submit"
-                  disabled={status === 'sending'}
-                  className="w-full py-3.5 rounded-xl bg-violet-600 hover:bg-violet-500 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/25 hover:-translate-y-0.5 flex items-center justify-center gap-2"
-                >
-                  {status === 'sending' ? (
-                    <>
-                      <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                      </svg>
-                      Sending…
-                    </>
-                  ) : (
-                    <>
-                      Send Message
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                      </svg>
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
-          </div>
         </div>
       </div>
     </section>

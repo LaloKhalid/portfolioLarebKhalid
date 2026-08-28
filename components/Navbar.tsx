@@ -7,7 +7,6 @@ const NAV_LINKS = [
   { href: '#about',    label: 'About'    },
   { href: '#skills',   label: 'Skills'   },
   { href: '#projects', label: 'Projects' },
-  { href: '#contact',  label: 'Contact'  },
 ];
 
 export default function Navbar() {
@@ -90,7 +89,7 @@ export default function Navbar() {
             onClick={() => scrollTo('#contact')}
             className="hidden sm:flex items-center gap-1.5 px-4 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/30 hover:-translate-y-px"
           >
-            Hire Me
+            Have a project in mind?
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

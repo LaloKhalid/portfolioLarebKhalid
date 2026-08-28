@@ -2,13 +2,6 @@
 
 import { useInView } from '@/hooks/useInView';
 
-const STATS = [
-  { value: '2+',   label: 'Years Learning' },
-  { value: '5+',   label: 'Projects Built' },
-  { value: '10+',  label: 'Technologies'   },
-  { value: '100%', label: 'Passion'        },
-];
-
 export default function About() {
   const { ref, inView } = useInView();
 
@@ -90,35 +83,12 @@ export default function About() {
                 delight users.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new design trends, experimenting with
-                emerging technologies, and pushing the boundaries of what's possible on the web.
+               When I'm not coding, I enjoy reading books, exploring new ideas, and learning about different technologies.
               </p>
             </div>
 
-            {/* Stats grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              {STATS.map((s, i) => (
-                <div
-                  key={s.label}
-                  className="p-4 rounded-2xl bg-white dark:bg-[#0e0e20] border border-gray-100 dark:border-white/[0.06] text-center hover:border-violet-500/30 hover:-translate-y-1 transition-all duration-300"
-                  style={{ transitionDelay: `${350 + i * 60}ms` }}
-                >
-                  <div className="text-xl font-black gradient-text">{s.value}</div>
-                  <div className="text-[10px] text-gray-400 dark:text-gray-500 mt-1 uppercase tracking-wide">{s.label}</div>
-                </div>
-              ))}
-            </div>
-
             {/* Resume CTA */}
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/25 hover:-translate-y-0.5"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              Download Resume
-            </a>
+            
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ const PROJECTS = [
       'An interactive travel planning application built as part of a course. Lets users explore destinations, plan itineraries, and discover amazing places around the world.',
     tags: ['React', 'Hooks', 'Components', 'API Integration'],
     gradient: 'from-violet-600 via-purple-500 to-indigo-600',
+     image: './public/travel-app.png',
     icon: '✈️',
     link: 'https://lnkd.in/emzCnqR8',
     linkLabel: 'View Project',
@@ -27,6 +28,33 @@ const PROJECTS = [
     linkLabel: 'Live Demo',
     featured: true,
   },
+    {
+    id: 3,
+    title: 'Scrum Board',
+    description:
+      'A dynamic Scrum board for managing tasks, tracking progress, and organizing agile workflows with an intuitive drag-and-drop interface.',
+    tags: ['JavaScript', 'Drag & Drop', 'Task Management', 'CSS'],
+    gradient: 'from-emerald-500 via-teal-500 to-cyan-600',
+    icon: '📋',
+    link: 'https://mygritscrumboard.netlify.app/',
+    linkLabel: 'Live Demo',
+    featured: true,
+  },
+
+  {
+  id: 4,
+  title: 'Job Tracking App',
+  description:
+    'A full-stack application currently in development, designed to help users organize, track, and manage their job applications throughout the hiring process.',
+  tags: ['Full Stack', 'In Development', 'Job Tracking'],
+  gradient: 'from-orange-500 via-amber-500 to-yellow-500',
+  icon: '💼',
+  link: null,
+  linkLabel: 'Coming Soon',
+  featured: false,
+},
+
+
 ];
 
 function GridPattern() {
