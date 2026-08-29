@@ -8,9 +8,9 @@ const NAV_LINKS = [
 ];
 
 const SOCIALS = [
-  { label: 'GitHub',   href: 'https://github.com',                    short: 'GH' },
-  { label: 'LinkedIn', href: 'https://linkedin.com',                  short: 'in' },
-  { label: 'Email',    href: 'mailto:lareb.usman.lu@gmail.com',       short: '@'  },
+  { label: 'GitHub',   href: 'https://github.com/LaloKhalid',                    short: 'GH' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/lareb-k-572469166',                  short: 'in' },
+  { label: 'Email',    href: 'mailto:lareb.usman@yahoo.com',       short: '@'  },
 ];
 
 export default function Footer() {

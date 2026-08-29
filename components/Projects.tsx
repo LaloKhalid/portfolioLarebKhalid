@@ -49,7 +49,7 @@ const PROJECTS = [
   tags: ['Full Stack', 'In Development', 'Job Tracking'],
   gradient: 'from-orange-500 via-amber-500 to-yellow-500',
   icon: '💼',
-  link: null,
+  link: '',
   linkLabel: 'Coming Soon',
   featured: false,
 },
