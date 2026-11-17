@@ -41,17 +41,25 @@ const PROJECTS = [
     featured: true,
   },
 
-  {
+ 
+{
   id: 4,
-  title: 'Job Tracking App',
+  title: 'Jobify — Job Application Tracker',
   description:
-    'A full-stack application currently in development, designed to help users organize, track, and manage their job applications throughout the hiring process.',
-  tags: ['Full Stack', 'In Development', 'Job Tracking'],
+    'A full-stack job application tracking application built with React, Node.js, Express, and MySQL. Features user authentication and allows users to organize, track, and manage their job applications.',
+  tags: [
+    'React',
+    'Node.js',
+    'Express',
+    'MySQL',
+    'JWT',
+    'Full Stack'
+  ],
   gradient: 'from-orange-500 via-amber-500 to-yellow-500',
   icon: '💼',
-  link: '',
-  linkLabel: 'Coming Soon',
-  featured: false,
+  link: 'https://jobbify101.netlify.app/',
+  linkLabel: 'Live Demo',
+  featured: true,
 },
 
 
